@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-03T23:35:08Z",
+  "title": "Design System: Mohamed Lamgouni Portfolio",
+  "extensions": {
+    "glass": {
+      "scope": "Navigation, portrait caption, availability badge and small controls only",
+      "fill": "color-mix(in srgb,var(--surface) 72%,transparent)",
+      "rim": "color-mix(in srgb,var(--text) 15%,transparent)",
+      "sheen": "color-mix(in srgb,var(--text) 9%,transparent)",
+      "backdropBlurPx": { "navigation": 20, "portraitCaption": 16, "controls": 12, "projectArrow": 10 },
+      "navigationBackgroundOpacity": 0.78,
+      "navigationSaturation": 1.15,
+      "portraitCaptionRadiusPx": 12
+    },
+    "colorMeta": {
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "Dark Page ground",
+        "cssVariable": "--bg",
+        "theme": "dark"
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Dark Control surface",
+        "cssVariable": "--surface",
+        "theme": "dark"
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "Dark Principal text",
+        "cssVariable": "--text",
+        "theme": "dark"
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark Muted text",
+        "cssVariable": "--muted",
+        "theme": "dark"
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Dark Divider and outline",
+        "cssVariable": "--line",
+        "theme": "dark"
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "Dark Amber accent",
+        "cssVariable": "--accent",
+        "theme": "dark"
+      },
+      "dark-on-accent": {
+        "role": "neutral",
+        "displayName": "Dark Accent foreground",
+        "cssVariable": "--on-accent",
+        "theme": "dark"
+      },
+      "light-bg": {
+        "role": "neutral",
+        "displayName": "Light Page ground",
+        "cssVariable": "--bg",
+        "theme": "light"
+      },
+      "light-surface": {
+        "role": "neutral",
+        "displayName": "Light Control surface",
+        "cssVariable": "--surface",
+        "theme": "light"
+      },
+      "light-text": {
+        "role": "neutral",
+        "displayName": "Light Principal text",
+        "cssVariable": "--text",
+        "theme": "light"
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "Light Muted text",
+        "cssVariable": "--muted",
+        "theme": "light"
+      },
+      "light-line": {
+        "role": "neutral",
+        "displayName": "Light Divider and outline",
+        "cssVariable": "--line",
+        "theme": "light"
+      },
+      "light-accent": {
+        "role": "primary",
+        "displayName": "Light Amber accent",
+        "cssVariable": "--accent",
+        "theme": "light"
+      },
+      "light-on-accent": {
+        "role": "neutral",
+        "displayName": "Light Accent foreground",
+        "cssVariable": "--on-accent",
+        "theme": "light"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero heading; user-pinned Geist.",
+        "responsive": [
+          {
+            "query": "(max-width:1100px)",
+            "fontSize": "54px"
+          },
+          {
+            "query": "(max-width:760px)",
+            "fontSize": "clamp(38px,8.2vw,58px)"
+          },
+          {
+            "query": "(min-width:1800px)",
+            "fontSize": "82px"
+          }
+        ]
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Project title",
+        "purpose": "Open project metadata.",
+        "responsive": [
+          {
+            "query": "(max-width:760px)",
+            "fontSize": "18px"
+          }
+        ]
+      },
+      "body": {
+        "displayName": "Introductory body",
+        "purpose": "Hero biography; 480px maximum width.",
+        "responsive": [
+          {
+            "query": "(max-width:760px)",
+            "fontSize": "14px"
+          }
+        ]
+      },
+      "project-body": {
+        "displayName": "Project description",
+        "purpose": "Recurring project descriptions, maximum width 57ch."
+      },
+      "button-label": {
+        "displayName": "Action label",
+        "purpose": "Primary and secondary pill actions."
+      },
+      "tag-label": {
+        "displayName": "Discipline label",
+        "purpose": "Noninteractive project tags."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16,1,0.3,1)",
+        "purpose": "Shared CSS --ease and Framer Motion ease [0.16,1,0.3,1]."
+      },
+      {
+        "name": "button-transition",
+        "value": "0.35s",
+        "purpose": "Background, color and enabled hover lift of -2px."
+      },
+      {
+        "name": "card-lift",
+        "value": "0.45s",
+        "purpose": "Framer Motion hover y: -5."
+      },
+      {
+        "name": "arrow-transform",
+        "value": "0.5s",
+        "purpose": "Cover arrow rotation of 45deg; its background transition uses default CSS ease."
+      },
+      {
+        "name": "cover-image",
+        "value": "0.7s",
+        "purpose": "Project image scale to 1.035."
+      },
+      {
+        "name": "portrait-image",
+        "value": "0.8s",
+        "purpose": "Grayscale restoration and scale to 1.025."
+      },
+      {
+        "name": "portrait-entrance",
+        "value": "1.1s",
+        "purpose": "Portrait y: [8,0], initial=false."
+      },
+      {
+        "name": "simple-state",
+        "value": "0.3s",
+        "purpose": "Navigation color and icon-button background; default CSS ease."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile",
+        "value": "760px",
+        "query": "(max-width:760px)"
+      },
+      {
+        "name": "tablet",
+        "value": "1100px",
+        "query": "(max-width:1100px)"
+      },
+      {
+        "name": "wide",
+        "value": "1800px",
+        "query": "(min-width:1800px)"
+      }
+    ],
+    "layout": {
+      "minimumViewport": "360px",
+      "container": {
+        "desktop": "min(1320px,calc(100% - 112px))",
+        "tablet": "calc(100% - 64px)",
+        "mobile": "calc(100% - 40px)"
+      },
+      "projectGrid": {
+        "desktopColumns": "1.16fr 1fr",
+        "evenCardOffset": "68px",
+        "mobileColumns": "1fr",
+        "mobileEvenCardOffset": "0",
+        "columnGapRef": "spacing.grid-column-gap",
+        "rowGapRef": "spacing.grid-row-gap",
+        "mobileGapRef": "spacing.grid-gap-mobile"
+      },
+      "heroColumns": {
+        "desktop": "1.7fr 1fr",
+        "tablet": "1.5fr 1fr",
+        "mobile": "1fr"
+      },
+      "media": {
+        "portraitAspectRatio": "4/5",
+        "projectAspectRatio": "16/10",
+        "objectFit": "cover"
+      }
+    },
+    "accessibility": {
+      "focus": {
+        "selector": "button:focus-visible,a:focus-visible",
+        "outline": "2px solid var(--accent)",
+        "outlineOffset": "5px"
+      },
+      "reducedMotion": {
+        "query": "(prefers-reduced-motion:reduce)",
+        "css": "html{scroll-behavior:auto;}*,*::before,*::after{animation:none!important;transition:none!important;}",
+        "react": "useReducedMotion() disables project-card hover lift and portrait entrance.",
+        "limitation": "CSS hover transforms retain their end states without transition."
+      },
+      "dialog": "Native showModal() provides focus trapping, Escape dismissal and focus restoration.",
+      "skipLink": "Skip to content link reveals on focus and targets #main."
+    },
+    "depth": {
+      "strategy": "Tonal surfaces and one-pixel semantic dividers; no box-shadow declarations.",
+      "dialogBackdrop": {
+        "background": "#090d10b8",
+        "backdropFilter": "blur(6px)"
+      },
+      "navigation": {
+        "wrapperBackground": "color-mix(in srgb,var(--bg) 82%,transparent)",
+        "wrapperBackdropFilter": "blur(12px)",
+        "innerBackground": "color-mix(in srgb,var(--bg) 87%,transparent)"
+      },
+      "mobileAvailability": {
+        "query": "(max-width:760px)",
+        "placement": "Hero bottom row; navbar availability instance hidden.",
+        "display": "inline-flex",
+        "gap": "7px",
+        "color": "var(--text)",
+        "exploreLinkWidth": "100%"
+      }
+    },
+    "font": {
+      "family": "Geist",
+      "userPinned": true,
+      "source": "@fontsource/geist",
+      "imports": [
+        "@fontsource/geist/latin-400.css",
+        "@fontsource/geist/latin-500.css",
+        "@fontsource/geist/latin-600.css"
+      ]
+    },
+    "evidence": {
+      "files": [
+        "src/styles.css",
+        "src/main.tsx",
+        "src/App.tsx",
+        "src/components/Navigation.tsx",
+        "src/components/Hero.tsx",
+        "src/components/Projects.tsx",
+        "src/components/ContactActions.tsx",
+        "PRODUCT.md",
+        ".impeccable/surface.md"
+      ],
+      "exclusions": [
+        "Cover-specific type sizes",
+        "Project-specific artwork colors",
+        "Synthesized tonal ramps",
+        "Unimplemented inputs and states"
+      ],
+      "resolvedInFinalSource": [
+        "Mobile cover typography",
+        "Mobile availability placement",
+        "Navbar wrapper transparency"
+      ],
+      "alreadyImplemented": [
+        "Latin-only Geist imports"
+      ],
+      "reviewStatus": "User reports independent finish review disposition ship; final production build and browser checks passed. Source extraction only; checks not rerun."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled pill for CV download and configured contact actions; uses active-theme variables.",
+      "html": "<button class=\"ds-primary\">Download CV</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;min-height:46px;padding:12px 21px;font-family:Geist,sans-serif;font-size:12px;font-weight:500;cursor:pointer;border:0;background:var(--text,#f0f0e9);color:var(--bg,#161b1e);transition:background .35s var(--ease,cubic-bezier(0.16,1,0.3,1)),color .35s var(--ease,cubic-bezier(0.16,1,0.3,1)),transform .35s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-primary:hover:not(:disabled){transform:translateY(-2px);background:var(--accent,#e9b35e);color:var(--on-accent,#201a12);}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-icon:focus-visible,.ds-nav a:focus-visible,.ds-cover:focus-visible{outline:2px solid var(--accent,#e9b35e);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none!important;animation:none!important;}}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined pill for copying a configured email; disabled while the address is absent.",
+      "html": "<button class=\"ds-secondary\">Copy email</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;min-height:46px;padding:12px 21px;font-family:Geist,sans-serif;font-size:12px;font-weight:500;cursor:pointer;background:transparent;color:var(--text,#f0f0e9);border:1px solid var(--line,#394143);transition:background .35s var(--ease,cubic-bezier(0.16,1,0.3,1)),color .35s var(--ease,cubic-bezier(0.16,1,0.3,1)),transform .35s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-secondary:hover:not(:disabled){transform:translateY(-2px);}.ds-secondary:disabled{color:var(--muted,#adb3af);cursor:not-allowed;}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-icon:focus-visible,.ds-nav a:focus-visible,.ds-cover:focus-visible{outline:2px solid var(--accent,#e9b35e);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none!important;animation:none!important;}}"
+    },
+    {
+      "name": "Circular control",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "Surface-filled theme switch and dialog close control.",
+      "html": "<button class=\"ds-icon\" aria-label=\"Close project details\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 6 6 18M6 6l12 12\"/></svg></button>",
+      "css": ".ds-icon{display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;background:var(--surface,#202629);color:var(--text,#f0f0e9);cursor:pointer;transition:background .3s;}.ds-icon:hover{background:var(--line,#394143);}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-icon:focus-visible,.ds-nav a:focus-visible,.ds-cover:focus-visible{outline:2px solid var(--accent,#e9b35e);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-icon{transition:none!important;animation:none!important;}}"
+    },
+    {
+      "name": "Project discipline tag",
+      "kind": "chip",
+      "refersTo": "project-tag",
+      "description": "Static discipline metadata; no interactive states exist.",
+      "html": "<ul class=\"ds-tags\" aria-label=\"Disciplines\"><li class=\"ds-tag\">Branding</li><li class=\"ds-tag\">Digital design</li></ul>",
+      "css": ".ds-tags{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:15px 0 0;padding:0;}.ds-tag{border:1px solid var(--line,#394143);font-family:Geist,sans-serif;font-size:10px;border-radius:999px;padding:5px 9px;color:var(--muted,#adb3af);}"
+    },
+    {
+      "name": "Navigation links",
+      "kind": "nav",
+      "description": "Compact anchor-link group extracted from the navigation; full wrapper material and responsive availability placement are recorded in extensions.depth.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#about\">About</a><a href=\"#projects\">Projects</a><a href=\"#contact\">Contact</a></nav>",
+      "css": ".ds-nav{display:flex;gap:35px;font-family:Geist,sans-serif;font-size:13px;color:var(--text,#f0f0e9);}.ds-nav a{display:flex;align-items:center;gap:6px;padding:10px 0;color:inherit;text-decoration:none;transition:color .3s;}.ds-nav a:hover{color:var(--accent,#e9b35e);}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-icon:focus-visible,.ds-nav a:focus-visible,.ds-cover:focus-visible{outline:2px solid var(--accent,#e9b35e);outline-offset:5px;}@media(max-width:760px){.ds-nav{gap:17px;font-size:12px;}}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none!important;animation:none!important;}}"
+    },
+    {
+      "name": "Project media frame",
+      "kind": "card",
+      "refersTo": "project-media",
+      "description": "Reusable media-trigger shape and circular arrow, with one existing project palette shown only as a preview example. Card hover translates the source Framer Motion behavior into CSS.",
+      "html": "<article class=\"ds-card\"><button class=\"ds-cover\" aria-label=\"View LV Manager project details\"><span class=\"ds-category\">Identity &amp; digital</span><span class=\"ds-placeholder\">Project artwork placeholder</span><span class=\"ds-arrow\" aria-hidden=\"true\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></span></button></article>",
+      "css": ".ds-card{--cover-bg:#d8e2dc;--cover-ink:#304c44;transition:transform .45s var(--ease,cubic-bezier(0.16,1,0.3,1));}.ds-card:hover{transform:translateY(-5px);}.ds-cover{width:100%;aspect-ratio:16/10;position:relative;display:block;overflow:hidden;border:0;border-radius:14px;text-align:left;padding:24px;font-family:Geist,sans-serif;color:var(--cover-ink);background:var(--cover-bg);cursor:pointer;}.ds-category{font-size:10px;position:absolute;top:22px;left:24px;}.ds-placeholder{position:absolute;left:24px;bottom:22px;display:flex;gap:7px;align-items:center;font-size:10px;}.ds-arrow{position:absolute;right:18px;top:16px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid color-mix(in srgb,var(--cover-ink) 40%,transparent);transition:transform .5s var(--ease,cubic-bezier(0.16,1,0.3,1)),background .5s;}.ds-cover:hover .ds-arrow{transform:rotate(45deg);background:color-mix(in srgb,var(--cover-ink) 8%,transparent);}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-icon:focus-visible,.ds-nav a:focus-visible,.ds-cover:focus-visible{outline:2px solid var(--accent,#e9b35e);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-card,.ds-arrow{transition:none!important;}.ds-card:hover{transform:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A composed selection of identity, print and digital work",
+    "overview": "The existing direction contract supplies this north star. Deep slate, clear neutral text, amber punctuation, self-hosted Geist and intentional whitespace frame the work. The interface is restrained, with broad type hierarchy and open project metadata.\n\nRounded media and pill actions provide a consistent form language. Tonal surfaces and fine dividers establish depth; small lifts, image zooms and arrow rotation make interaction visible. These are extracted implementation decisions, not a new visual proposal.",
+    "keyCharacteristics": [
+      "User-pinned Geist typography.",
+      "Slate and neutral themes with one amber interface accent.",
+      "Rounded media, pill actions and open metadata.",
+      "Responsive staggered work grid.",
+      "Restrained motion with visible keyboard focus and reduced-motion support."
+    ],
+    "rules": [
+      {
+        "name": "The Semantic Theme Rule",
+        "body": "Apply the active theme's matching background, text, muted, line, accent and on-accent roles together.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pinned Font Rule",
+        "body": "Use self-hosted Geist for the interface, retaining the established weights and sans-serif fallback.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do preserve user-pinned Geist and its self-hosted Latin weight imports.",
+      "Do apply complete semantic token sets when switching themes.",
+      "Do use 14px media corners and pill action silhouettes.",
+      "Do collapse the staggered work grid to one column without card offsets on mobile.",
+      "Do retain accent focus outlines, reduced-motion handling and native dialog keyboard behavior.",
+      "Do label placeholder media truthfully."
+    ],
+    "donts": [
+      "Don't promote individual cover wordmark sizes or artwork palettes into global tokens.",
+      "Don't invent shadow scales, color ramps, inputs or component states absent from the source.",
+      "Don't hide availability entirely on mobile when the configured status is available."
+    ]
+  }
+}
