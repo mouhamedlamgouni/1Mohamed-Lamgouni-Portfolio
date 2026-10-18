@@ -20,9 +20,9 @@ Deploy the generated `dist/` directory to any static host. Relative asset paths 
 
 Edit `src/data.ts` to set the real email, social URLs, portrait, availability, project dates, project image paths, and case-study URLs. Empty email and social URLs produce clearly unavailable controls instead of fake destinations. Project cards open accessible scope summaries until full case studies are supplied.
 
-The supplied photograph in `public/portrait.jpg` fills the original rounded portrait frame, preserving its grayscale/color hover effect, caption and monogram. The earlier generated artwork remains saved as an unused asset. Replace illustrative project covers with real artwork using each project's `image` field. All covers explicitly identify themselves as placeholders. Project names and descriptions are based on the supplied portfolio-information PDF. Only MIND DESIGN has a supplied date.
+The supplied photograph in `public/portrait-amber.jpg` fills the rounded portrait frame, preserving its grayscale/color hover effect, caption and monogram. The CV in `public/Mohamed-Lamgouni-CV.pdf` uses the same portrait and palette and includes all projects listed in the portfolio; `cv-template.html` is its editable print source. To regenerate the PDF, open that template in Edge and print to PDF with background graphics enabled and headers/footers disabled. Project dates are shown only where supplied.
 
-`public/Mohamed-Lamgouni-CV.pdf` is a factual CV prepared from the supplied document. Update it when contact information becomes available. No invented experience, metrics, client results, or dates are included.
+`public/Mohamed-Lamgouni-CV.pdf` is a factual CV based on the supplied education and profile details plus the portfolio projects. Contact details are taken from `src/data.ts`. No employment history, client results, or project dates are invented.
 
 Dark/light themes persist when browser storage is available. Email copying reports success and failure; a mail link provides recovery. Native project dialogs support Escape, focus trapping, and focus restoration. Motion respects reduced-motion preferences. Morocco's clock uses the IANA Africa/Casablanca timezone, including seasonal offset changes.
 
