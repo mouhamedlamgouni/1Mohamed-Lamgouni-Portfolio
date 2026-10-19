@@ -20,7 +20,7 @@ Deploy the generated `dist/` directory to any static host. Relative asset paths 
 
 Edit `src/data.ts` to set the real email, social URLs, portrait, availability, project dates, project image paths, and case-study URLs. Empty email and social URLs produce clearly unavailable controls instead of fake destinations. Project cards open accessible scope summaries until full case studies are supplied.
 
-The supplied photograph in `public/portrait-amber.jpg` fills the rounded portrait frame, preserving its grayscale/color hover effect, caption and monogram. The CV in `public/Mohamed-Lamgouni-CV.pdf` uses the same portrait and palette and includes all projects listed in the portfolio; `cv-template.html` is its editable print source. To regenerate the PDF, open that template in Edge and print to PDF with background graphics enabled and headers/footers disabled. Project dates are shown only where supplied.
+The supplied photograph in `public/portrait-profile.jpeg` fills the rounded portfolio portrait frame, preserving its grayscale/color hover effect, caption and monogram. The CV in `public/Mohamed-Lamgouni-CV.pdf` uses the same palette and includes all projects listed in the portfolio; `cv-template.html` is its editable print source. To regenerate the PDF, open that template in Edge and print to PDF with background graphics enabled and headers/footers disabled. Project dates are shown only where supplied.
 
 `public/Mohamed-Lamgouni-CV.pdf` is a factual CV based on the supplied education and profile details plus the portfolio projects. Contact details are taken from `src/data.ts`. No employment history, client results, or project dates are invented.
 

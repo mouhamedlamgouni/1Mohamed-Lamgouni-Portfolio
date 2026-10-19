@@ -6,7 +6,7 @@ export const profile = {
   timezone: 'Africa/Casablanca',
   email: 'mouhamedlamgouni@gmail.com',
   resume: './Mohamed-Lamgouni-CV.pdf',
-  portrait: './portrait-amber.jpg',
+  portrait: './portrait-profile.jpeg',
   available: true, // Requested status; confirm current availability before publication.
   socials: [
     { label: 'LinkedIn', url: '' }, { label: 'GitHub', url: '' },
