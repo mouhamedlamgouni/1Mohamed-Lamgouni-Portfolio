@@ -9,8 +9,8 @@ export const profile = {
   portrait: './portrait-profile.jpeg',
   available: true, // Requested status; confirm current availability before publication.
   socials: [
-    { label: 'LinkedIn', url: '' }, { label: 'GitHub', url: '' },
-    { label: 'Read.cv', url: '' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/mohamed-lamgouni-4b10bb390/?isSelfProfile=true' },
+    { label: 'GitHub', url: 'https://github.com/mouhamedlamgouni' },
   ],
 };
 
