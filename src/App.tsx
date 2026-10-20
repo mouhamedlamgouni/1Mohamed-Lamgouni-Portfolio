@@ -45,11 +45,13 @@ export default function App() {
         <div className="practice-details"><h3>{text.whatIWorkOn}</h3><ul className="discipline-list">{text.disciplines.map(item => <li key={item}>{item}<ArrowUpRight size={16} aria-hidden="true" /></li>)}</ul><div className="tool-list"><span>{text.tools}</span><p>{tools.join(' · ')}</p></div></div>
       </section>
       <section className="contact section" id="contact" aria-labelledby="contact-title">
-        <div className="contact-top"><h2 id="contact-title">{text.contactTitle}<br />{text.contactTitleSecond}</h2></div>
+        <div className="contact-top">
+          <h2 id="contact-title">{text.contactTitle}<br />{text.contactTitleSecond}</h2>
+          <svg className="contact-big-arrow" viewBox="0 0 180 110" aria-hidden="true"><path d="M96 99c9-22 29-45 77-76-31-6-70-5-111 4 28-2 49 2 69 10-19 15-31 31-35 62Z" /><path d="M39 102c6-17 20-34 58-56-23-5-48-4-78 4 20-1 36 2 51 8-17 12-27 26-31 44Z" /></svg>
+        </div>
         <div className="contact-bottom">
           <p>{text.contactPrompt}<br />{text.contactPromptSecond}</p>
           <div className="contact-cta">
-            <svg className="contact-big-arrow" viewBox="0 0 180 110" aria-hidden="true"><path d="M96 99c9-22 29-45 77-76-31-6-70-5-111 4 28-2 49 2 69 10-19 15-31 31-35 62Z" /><path d="M39 102c6-17 20-34 58-56-23-5-48-4-78 4 20-1 36 2 51 8-17 12-27 26-31 44Z" /></svg>
             <ContactActions language={language} />
           </div>
         </div>
