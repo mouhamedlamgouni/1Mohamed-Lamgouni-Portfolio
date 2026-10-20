@@ -19,7 +19,7 @@ h1,h2,h3,p,figure { margin:0; }
 h1,h2 { font-weight:500; letter-spacing:-.035em; text-wrap:balance; }
 svg { flex-shrink:0; }
 .page-shell { width:min(1320px,calc(100% - 112px)); margin-inline:auto; }
-.nav-wrap { position:sticky; top:0; z-index:20; padding:18px 0; background:color-mix(in srgb,var(--bg) 78%,transparent); backdrop-filter:blur(20px) saturate(1.15); -webkit-backdrop-filter:blur(20px) saturate(1.15); box-shadow:0 8px 24px -20px #00000070; }
+.nav-wrap { position:sticky; top:0; z-index:20; padding:18px 0; background:color-mix(in srgb,var(--bg) 68%,transparent); backdrop-filter:blur(26px) saturate(1.15); -webkit-backdrop-filter:blur(26px) saturate(1.15); box-shadow:0 8px 24px -20px #00000070; }
 .navigation { width:min(1320px,calc(100% - 112px)); margin:auto; display:flex; align-items:center; justify-content:space-between; min-height:56px; border-bottom:1px solid var(--glass-rim); background:transparent; padding-bottom:14px; gap:24px; }
 .signature { font-size:34px; font-weight:600; letter-spacing:-.04em; line-height:1; }
 .signature span,.footer-name span { color:var(--accent); }
