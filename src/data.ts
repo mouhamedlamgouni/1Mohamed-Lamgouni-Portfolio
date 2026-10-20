@@ -82,6 +82,7 @@ export const projects: Project[] = [
     tags: ['YouTube thumbnails', 'Digital design'], tone: 'creative', wordmark: 'YouTube\nThumbnails', image: '', href: '',
     slides: [
       { src: './projects/Miniatures YouTube/ILYASSjpg.jpg', alt: 'YouTube football thumbnail featuring a creator, Moroccan players, and Arabic headline text' },
+      { src: './projects/Miniatures YouTube/QGmiO4myiA.webp', alt: 'YouTube food shopping thumbnail featuring a creator, a receipt, and a savings offer' },
     ],
     deliverables: ['YouTube thumbnail design', 'Video visual concepts', 'Channel identity assets'] },
   { id: 'cafe-boutique', title: 'CaféBoutique.ma – Logo Design', category: 'Brand identity', year: '2024',

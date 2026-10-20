@@ -180,6 +180,7 @@ h2 { font-size:clamp(32px,3.4vw,49px); line-height:1.14; }
   .icon-button { width:34px; height:34px; }
 }
 @media(max-width:760px) {
+  .contact-top { align-items:flex-start; flex-direction:column-reverse; gap:12px; }
   .portrait { max-height:none; aspect-ratio:auto; }
   .creative .cover-wordmark { font-size:clamp(38px,11vw,52px); }
   .mobile-availability { display:inline-flex; align-items:center; gap:7px; color:var(--text); }
