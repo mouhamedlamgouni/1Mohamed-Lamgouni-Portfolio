@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type PointerEvent } from 'react';
 import { ArrowRight, ArrowUpRight, ImagePlus, Pause, Play, X } from 'lucide-react';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { projects, type Project } from '../data';
@@ -25,6 +25,8 @@ function ProjectCarousel({ project, onOpen, language }: { project: Project; onOp
   const [activeSlideRatio, setActiveSlideRatio] = useState<number | null>(null);
   const reducedMotion = useReducedMotion();
   const region = useRef<HTMLDivElement>(null);
+  const swipeStart = useRef<{ x: number; y: number } | null>(null);
+  const swiped = useRef(false);
   const visible = useInView(region);
 
   useEffect(() => {
@@ -64,9 +66,27 @@ function ProjectCarousel({ project, onOpen, language }: { project: Project; onOp
     return () => window.clearInterval(timer);
   }, [paused, hovered, focused, reducedMotion, visible, slides, active]);
   const activeSlideIsVideo = slides[active]?.kind === 'video';
+  const handlePointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    const target = event.target as Element;
+    if (event.pointerType === 'mouse' || !target.closest('.carousel-cover') || target.closest('video')) return;
+    swipeStart.current = { x: event.clientX, y: event.clientY };
+  };
+  const handlePointerUp = (event: PointerEvent<HTMLDivElement>) => {
+    if (!swipeStart.current) return;
+    const deltaX = event.clientX - swipeStart.current.x;
+    const deltaY = event.clientY - swipeStart.current.y;
+    swipeStart.current = null;
+    if (Math.abs(deltaX) < 45 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+    swiped.current = true;
+    setActive(current => (current + (deltaX < 0 ? 1 : -1) + slides.length) % slides.length);
+    setPaused(true);
+    window.setTimeout(() => { swiped.current = false; }, 500);
+  };
   return <div ref={region} className="project-carousel" role="region" aria-roledescription="carousel" aria-label={`${project.title} ${text.carouselLabel}`}
     onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}
-    onFocusCapture={() => setFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
+    onFocusCapture={() => setFocused(true)} onBlurCapture={event => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}
+    onPointerDown={handlePointerDown} onPointerUp={handlePointerUp} onPointerCancel={() => { swipeStart.current = null; }}
+    onClickCapture={event => { if (swiped.current) { event.preventDefault(); event.stopPropagation(); swiped.current = false; } }}>
     <div className="project-cover carousel-cover" style={activeSlideRatio ? { aspectRatio: activeSlideRatio } : undefined}>
       <span className="carousel-track" style={{ transform: `translateX(-${active * 100}%)` }}>
         {slides.map((slide, index) => <span key={slide.src} className="carousel-slide" aria-hidden={index !== active}>
